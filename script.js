@@ -1,85 +1,72 @@
 // Update this object with your real profile details.
 const siteData = {
-  name: "Your Name",
-  role: "PhD Scholar",
+  name: "Akshay Kumar E",
+  role: "PhD Scholar | Cybersecurity Researcher",
   summary:
-    "I am a PhD scholar with research interests in rigorous, problem-driven academic work. My work combines careful analysis, systematic experimentation, and practical relevance.",
-  location: "Your University, India",
-  email: "your.email@university.edu",
+    "I am a PhD scholar at IIT Madras working with Prof. Chester Rebeiro. My research focuses on power side-channel attacks, countermeasures, and secure processor design.",
+  location: "IIT Madras, Chennai, India",
+  email: "akshay@cse.iitm.ac.in",
   cvUrl: "#",
-  focusTitle: "Focused research with academic rigor",
+  focusTitle: "Power side-channel attacks and secure processor design",
   focusText:
-    "Use this space for a short description of your dissertation topic, current lab focus, or ongoing work. Keep it specific and formal.",
+    "My current work studies security risks in modern computing systems, with emphasis on side-channel leakage, countermeasure design, and hardware-aware security analysis.",
   about: [
-    "I am currently pursuing my PhD and working on research problems that require both conceptual depth and methodological clarity. My academic interests are centered on producing work that is technically sound, relevant, and carefully evaluated.",
-    "This website presents a concise overview of my background, research interests, current work, and selected academic outputs. It can also be used as a central place for updates, publications, and professional contact.",
+    "I am currently pursuing my PhD at the Indian Institute of Technology Madras under the guidance of Prof. Chester Rebeiro. My research interests lie broadly in cybersecurity, cryptography, side-channel attacks, and secure processor design.",
+    "I am particularly interested in understanding practical leakage channels in computing systems and developing rigorous methods to analyze and mitigate them.",
   ],
-  heroMeta: ["PhD Scholar", "Researcher", "Academic Website"],
+  heroMeta: ["PhD Scholar", "Cybersecurity", "Secure Hardware"],
   news: [
     {
-      date: "Mar 2026",
-      text: "Currently working on my dissertation and extending my ongoing research.",
+      date: "Current",
+      text: "Working on doctoral research in power side-channel attacks and secure processor design.",
     },
     {
-      date: "Jan 2026",
-      text: "Presented ongoing work in a departmental seminar.",
-    },
-    {
-      date: "Oct 2025",
-      text: "Began a new phase of focused doctoral research.",
+      date: "Research",
+      text: "Exploring countermeasures, RISC-V architecture, and deep learning methods for security analysis.",
     },
   ],
   researchTags: [
-    "PhD Research",
-    "Academic Writing",
-    "Experimental Methods",
-    "Interdisciplinary Work",
+    "Cybersecurity",
+    "Cryptography",
+    "Side-Channel Attacks",
+    "Secure Processor Design",
+    "RISC-V Architecture",
+    "Deep Learning for Security Analysis",
   ],
   researchAreas: [
     {
-      title: "Primary Research Theme",
-      text: "Replace this with a concise description of your dissertation topic, problem statement, and why it matters.",
+      title: "Side-Channel Attacks and Countermeasures",
+      text: "Analyzing leakage channels in computing systems and studying techniques to reduce practical attack surfaces.",
     },
     {
-      title: "Methods and Approach",
-      text: "Mention the methods you use such as experiments, modeling, simulations, field work, theory, or system building.",
+      title: "Secure Processor Design",
+      text: "Investigating hardware-aware security questions, including processor-level design choices and their security implications.",
     },
     {
-      title: "Future Directions",
-      text: "Add the problems you want to explore next, the questions driving your work, or the impact you want your research to create.",
+      title: "Learning-Based Security Analysis",
+      text: "Exploring the role of deep learning methods in security evaluation and side-channel analysis.",
     },
   ],
   experience: [
     {
       title: "PhD Scholar",
-      text: "Department / Lab Name, University Name. Add your advisor, start year, and the broad focus of your doctoral work.",
-    },
-    {
-      title: "Previous Academic Background",
-      text: "Summarize your master's, bachelor's, or earlier research experience in one or two lines.",
+      text: "Indian Institute of Technology Madras. Advisor: Prof. Chester Rebeiro. Research focus: cybersecurity, side-channel attacks, and secure processor design.",
     },
   ],
   publications: [
     {
-      title: "Working Paper / Publication Title",
-      text: "Add one line describing the contribution, venue, or status such as submitted, under review, or published.",
-      meta: "Authors, Venue, Year",
-    },
-    {
-      title: "Project or Research Output",
-      text: "Use this area for a dataset, software artifact, thesis chapter, workshop paper, or technical report.",
-      meta: "Project Link or Note",
+      title: "Selected publications and projects",
+      text: "Research outputs, publications, and project links will be added here as they become available.",
+      meta: "PhD Research",
     },
   ],
   contactText:
     "I welcome academic correspondence, collaboration opportunities, and professional inquiries related to my research.",
   contactLinks: [
-    { label: "Email", value: "your.email@university.edu", href: "mailto:your.email@university.edu" },
-    { label: "Google Scholar", value: "Add your profile", href: "#" },
-    { label: "LinkedIn", value: "Add your profile", href: "#" },
+    { label: "Email", value: "akshay@cse.iitm.ac.in", href: "mailto:akshay@cse.iitm.ac.in" },
     { label: "GitHub", value: "AkshayKumarEdayilliam", href: "https://github.com/AkshayKumarEdayilliam" },
   ],
-  footer: `© ${new Date().getFullYear()} Your Name. Built for GitHub Pages.`,
+  footer: `© ${new Date().getFullYear()} Akshay Kumar E. Built for GitHub Pages.`,
 };
 
 const setText = (id, value) => {
