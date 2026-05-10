@@ -6,11 +6,11 @@
   --line-strong: #c4cfdb;
   --text: #16202a;
   --muted: #52606d;
-  --accent: #163a63;
-  --accent-soft: #edf3f8;
+  --accent: #14314f;
+  --accent-2: #08736b;
+  --accent-soft: #edf6f4;
   --shadow: 0 18px 48px rgba(18, 33, 51, 0.06);
   --radius-xl: 20px;
-  --radius-lg: 16px;
   --radius-md: 12px;
   --max-width: 1120px;
 }
@@ -27,20 +27,12 @@ body {
   margin: 0;
   font-family: "Source Sans 3", sans-serif;
   color: var(--text);
-  background: var(--bg);
+  background:
+    linear-gradient(rgba(20, 49, 79, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 49, 79, 0.035) 1px, transparent 1px),
+    var(--bg);
+  background-size: 36px 36px;
   min-height: 100vh;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: 1;
-  background-image:
-    linear-gradient(rgba(22, 58, 99, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(22, 58, 99, 0.03) 1px, transparent 1px);
-  background-size: 32px 32px;
 }
 
 .page-shell {
@@ -81,8 +73,13 @@ body::before {
 
 .site-nav a {
   color: var(--muted);
-  font-weight: 600;
   font-size: 1rem;
+  font-weight: 700;
+}
+
+.site-nav a:hover,
+.contact-link:hover {
+  color: var(--accent-2);
 }
 
 .hero {
@@ -107,14 +104,20 @@ body::before {
   padding: 42px;
 }
 
+.hero-card {
+  padding: 28px;
+  background: var(--surface-alt);
+  border-top: 4px solid var(--accent-2);
+}
+
 .eyebrow,
 .section-heading span,
 .portrait-label {
   display: inline-block;
   margin: 0 0 12px;
-  color: var(--accent);
+  color: var(--accent-2);
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -128,13 +131,13 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(2.8rem, 6vw, 4.4rem);
   max-width: 10ch;
+  font-size: 4.2rem;
 }
 
 h2 {
-  font-size: clamp(1.6rem, 3vw, 2.3rem);
   margin-bottom: 14px;
+  font-size: 2rem;
 }
 
 .hero-summary,
@@ -144,8 +147,8 @@ h2 {
 .contact-copy,
 #focusText {
   color: var(--muted);
-  line-height: 1.75;
   font-size: 1.06rem;
+  line-height: 1.75;
 }
 
 .hero-summary {
@@ -166,21 +169,17 @@ h2 {
   justify-content: center;
   min-height: 46px;
   padding: 0 18px;
-  border-radius: 10px;
-  font-weight: 700;
-  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
-}
-
-.button:hover,
-.contact-link:hover,
-.site-nav a:hover {
-  transform: translateY(-2px);
+  border-radius: 8px;
+  font-weight: 800;
 }
 
 .button-primary {
   color: #ffffff;
   background: var(--accent);
-  box-shadow: none;
+}
+
+.button-primary:hover {
+  background: var(--accent-2);
 }
 
 .button-secondary {
@@ -201,20 +200,11 @@ h2 {
 .hero-meta li,
 .tag-list span {
   padding: 8px 12px;
-  border-radius: 8px;
+  border-radius: 999px;
   background: var(--accent-soft);
-  border: 1px solid #d8e4ef;
-  color: var(--muted);
-  font-weight: 600;
-}
-
-.hero-card {
-  padding: 28px;
-  background: var(--surface-alt);
-}
-
-.portrait-content {
-  padding: 0;
+  border: 1px solid #d4e8e5;
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .news-panel,
@@ -245,6 +235,7 @@ h2 {
 .publication-item strong {
   display: block;
   margin-bottom: 8px;
+  color: var(--accent);
   font-size: 1.02rem;
 }
 
@@ -283,17 +274,23 @@ h2 {
 
 .publication-meta {
   margin-top: 10px;
-  color: var(--accent);
+  color: var(--accent-2);
   font-size: 0.96rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .contact-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   color: var(--text);
-  font-weight: 700;
+  font-weight: 800;
+}
+
+.contact-link span:last-child {
+  overflow-wrap: anywhere;
+  text-align: right;
 }
 
 .site-footer {
@@ -329,14 +326,14 @@ h2 {
 }
 
 @media (max-width: 920px) {
-  .hero,
-  .grid-layout {
-    grid-template-columns: 1fr;
-  }
-
   .site-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .hero,
+  .grid-layout {
+    grid-template-columns: 1fr;
   }
 
   .panel-wide {
@@ -345,6 +342,10 @@ h2 {
 
   .hero-copy {
     padding: 30px 24px;
+  }
+
+  h1 {
+    font-size: 3rem;
   }
 }
 
@@ -361,16 +362,21 @@ h2 {
     padding: 22px;
   }
 
-  .site-header {
-    align-items: flex-start;
-  }
-
   .site-nav {
     justify-content: flex-start;
     gap: 12px;
   }
 
   h1 {
-    font-size: clamp(2.3rem, 13vw, 3.2rem);
+    font-size: 2.5rem;
+  }
+
+  .contact-link {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .contact-link span:last-child {
+    text-align: left;
   }
 }
