@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Profile</title>
+    <meta
+      name="description"
+      content="Personal academic website for a PhD scholar."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top">Academic Profile</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#experience">Experience</a>
+          <a href="#publications">Publications</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow" id="heroRole"></p>
+            <h1 id="heroName"></h1>
+            <p class="hero-summary" id="heroSummary"></p>
+            <div class="hero-actions">
+              <a class="button button-primary" id="cvLink" href="#">View CV</a>
+              <a class="button button-secondary" href="#research">Explore Research</a>
+            </div>
+            <ul class="hero-meta" id="heroMeta"></ul>
+          </div>
+
+          <aside class="hero-card">
+            <div class="portrait-content">
+              <p class="portrait-label">Research Focus</p>
+              <h2 id="focusTitle"></h2>
+              <p id="focusText"></p>
+            </div>
+          </aside>
+        </section>
+
+        <section class="news-panel">
+          <div class="section-heading">
+            <span>Recent Updates</span>
+            <h2>What I am working on now</h2>
+          </div>
+          <div class="timeline" id="newsList"></div>
+        </section>
+
+        <section class="grid-layout">
+          <article class="panel panel-wide" id="about">
+            <div class="section-heading">
+              <span>About</span>
+              <h2>Academic Profile</h2>
+            </div>
+            <div class="rich-text" id="aboutText"></div>
+          </article>
+
+          <article class="panel" id="research">
+            <div class="section-heading">
+              <span>Research</span>
+              <h2>Research Interests</h2>
+            </div>
+            <div class="tag-list" id="researchTags"></div>
+            <div class="stack-list" id="researchAreas"></div>
+          </article>
+
+          <article class="panel" id="experience">
+            <div class="section-heading">
+              <span>Experience</span>
+              <h2>Education and Experience</h2>
+            </div>
+            <div class="stack-list" id="experienceList"></div>
+          </article>
+
+          <article class="panel panel-wide" id="publications">
+            <div class="section-heading">
+              <span>Selected Work</span>
+              <h2>Publications and Projects</h2>
+            </div>
+            <div class="publication-list" id="publicationList"></div>
+          </article>
+
+          <article class="panel" id="contact">
+            <div class="section-heading">
+              <span>Contact</span>
+              <h2>Contact Information</h2>
+            </div>
+            <p class="contact-copy" id="contactText"></p>
+            <div class="contact-links" id="contactLinks"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <p id="footerText"></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
